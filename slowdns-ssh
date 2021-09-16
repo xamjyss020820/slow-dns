@@ -77,8 +77,8 @@ wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/ssh/startdns
 wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/ssh/restartdns
 chmod +x startdns
 chmod +x restartdns
-sed -i "s;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
-sed -i "s;$nameserver;g" /etc/slowdns/restartdns > /dev/null 2>&1
+sed -i "s;1234;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
+sed -i "s;1234;$nameserver;g" /etc/slowdns/restartdns > /dev/null 2>&1
 cp startdns /bin/
 cp restartdns /bin/
 }
