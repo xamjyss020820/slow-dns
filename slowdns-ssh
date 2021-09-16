@@ -57,7 +57,7 @@ echo -e "CONFIGURING IPTABLES..."
 ipt_set () {
 cd /etc
 mv rc.local rc.local.bkp
-wget https://github.com/starrising321/slow-dns/raw/main/rc.local
+wget https://github.com/xamjyss020820/slow-dns/raw/main/rc.local
 chmod +x /etc/rc.local
 systemctl enable rc-local
 systemctl start rc-local
@@ -73,12 +73,12 @@ touch infons
 echo $nameserver > infons
 set_ns () {
 sleep 1
-wget https://raw.githubusercontent.com/starrising321/slow-dns/main/ssh/startdns 
-wget https://raw.githubusercontent.com/starrising321/slow-dns/main/ssh/restartdns
+wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/ssh/startdns 
+wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/ssh/restartdns
 chmod +x startdns
 chmod +x restartdns
-sed -i "s;1234;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
-sed -i "s;1234;$nameserver;g" /etc/slowdns/restartdns > /dev/null 2>&1
+sed -i "s;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
+sed -i "s;$nameserver;g" /etc/slowdns/restartdns > /dev/null 2>&1
 cp startdns /bin/
 cp restartdns /bin/
 }
@@ -132,7 +132,7 @@ echo -ne "\033[1;33mYOUR Domain/NS:\033[0m " && cat /etc/slowdns/infons
 echo ""
 echo -ne "\033[1;33mYOUR KEY:\033[0m " && cat /root/server.pub
 echo ""
-echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/starrising321/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
+echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
 echo ""
 echo -e "\033[1;33m YOUR KEY is saved in the file /root/server.pub\033[0m"
 echo -e "\033[1;33mKeep it in a safe place, you might need it in the future!\033[0m"
@@ -159,7 +159,7 @@ echo -ne "\033[1;33mYOUR Domain/NS:\033[0m " && cat /etc/slowdns/infons
 echo ""
 echo -ne "\033[1;33mYOUR KEY:\033[0m " && cat /root/server.pub
 echo ""
-echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/starrising321/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
+echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
 echo ""
 echo -e "\033[1;33m YOUR KEY is saved in the file /root/server.pub\033[0m"
 echo -e "\033[1;33mKeep it in a safe place, you might need it in the future!\033[0m"
@@ -169,8 +169,8 @@ Opcao3 () {
 echo -e "Downloading default key pair..."
 cd
 rm server.key server.pub
-wget https://raw.githubusercontent.com/starrising321/slow-dns/main/server.key
-wget https://raw.githubusercontent.com/starrising321/slow-dns/main/server.pub
+wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/server.key
+wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/server.pub
 sleep 1
 echo -e "Download Completed"
 sleep 1
@@ -190,7 +190,7 @@ echo -ne "\033[1;33mYOUR Domain/NS:\033[0m " && cat /etc/slowdns/infons
 echo ""
 echo -ne "\033[1;33mYOUR KEY:\033[0m " && cat /root/server.pub
 echo ""
-echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/starrising321/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
+echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
 echo ""
 echo -e "\033[1;33m YOUR KEY is saved in the file /root/server.pub\033[0m"
 echo -e "\033[1;33mKeep it in a safe place, you might need it in the future!\033[0m"
@@ -237,7 +237,7 @@ echo -ne "\033[1;33mYOUR Domain/NS:\033[0m " && cat /etc/slowdns/infons
 echo ""
 echo -ne "\033[1;33mYour KEY:\033[0m " && cat /root/server.pub
 echo ""
-echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/starrising321/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
+echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
 echo ""
 echo -e "\033[1;33m YOUR KEY is saved in the file /root/server.pub\033[0m"
 echo -e "\033[1;33mKeep it in a safe place, you might need it in the future!\033[0m"
@@ -246,8 +246,8 @@ echo ""
 opc_key2 () {
 echo -e "Downloading default key pair..."
 cd
-wget https://raw.githubusercontent.com/starrising321/slow-dns/main/server.key
-wget https://raw.githubusercontent.com/starrising321/slow-dns/main/server.pub
+wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/server.key
+wget https://raw.githubusercontent.com/xamjyss020820xamjyss020820/slow-dns/main/server.pub
 sleep 1
 echo -e "Download Completed"
 sleep 1
@@ -267,7 +267,7 @@ echo -ne "\033[1;33mYOUR Domain/NS:\033[0m " && cat /etc/slowdns/infons
 echo ""
 echo -ne "\033[1;33mYOUR KEY:\033[0m " && cat /root/server.pub
 echo ""
-echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/starrising321/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
+echo -ne "\033[1;33mCOMMAND TERMUX:\033[0m curl -sO https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/scripts/slowdns && chmod +x slowdns && ./slowdns " && cat /etc/slowdns/infons /root/server.pub
 echo ""
 echo -e "\033[1;33m YOUR KEY is saved in the file /root/server.pub\033[0m"
 echo -e "\033[1;33mKeep it in a safe place, you might need it in the future!\033[0m"
