@@ -67,7 +67,7 @@ clear
 echo ""
 echo -e "\033[1;31m ATTENTION AT THIS STEP! \033[1;33m"
 echo ""
-echo -ne "\033[1;32m Enter your DOMAIN (NAMESERVER)\033[1;37m: "; read nameserver
+nameserver=$MYDNS
 cd /etc/slowdns
 touch infons
 echo $nameserver > infons
