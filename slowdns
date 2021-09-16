@@ -2,7 +2,7 @@
 clear
 slowdns () {
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "MENU SLOWDNS MANAGER V3.0" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "SLOW DNS MANAGER MENU V3.0" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 echo -e "\033[0;36m#===================================================#\033[m"
 echo -e "\033[0;36m# .|'''.|'||                '||''|. '|.   '|'.|'''.|#\033[m"
@@ -11,7 +11,7 @@ echo -e "\033[0;36m#  ''|||. ||.|  '|.||  ||  | ||    ||| '|. |  ''|||.#\033[m"
 echo -e "\033[0;36m#.     '||||||   || ||| |||  ||    |||   |||.     '|#\033[m"
 echo -e "\033[0;36m#|'....|'.||.'|..|'  |   |  .||...|'.|.   '||'....|'#\033[m"
 echo -e "\033[0;36m#---------------------------------------------------#\033[m"
-echo -e "\033[0;36m#\033[m \033[0;31mDESENVOLVIDO POR @LAAEL | CANAL @OFICIAL_SPEEDNET\033[m \033[0;36m#\033[m"
+echo -e "\033[0;36m#\033[m \033[0;31mDEVELOPED BY @LAAEL | CANAL @OFICIAL_SPEEDNET\033[m \033[0;36m#\033[m"
 echo -e "\033[0;36m#===================================================#\033[m"
     echo ""
     echo -e "\033[0;36m[01]\033[m | Instalar SlowDNS SSH"
@@ -27,7 +27,7 @@ echo -e "\033[0;36m#===================================================#\033[m"
     echo -e "\033[0;36m[11]\033[m | Remover Script"
     echo -e "\033[0;36m[00]\033[m | SAIR"
     echo ""
-    echo -ne "\033[0;36mO que deseja fazer?:\0033[m " && read opcao
+    echo -ne "\033[0;36mWhat do you want to do?:\0033[m " && read opcao
     case $opcao in
     1) Opcao1 ;;
     2) Opcao2 ;;
@@ -41,7 +41,7 @@ echo -e "\033[0;36m#===================================================#\033[m"
     10) Opcao10 ;;
     11) Opcao11 ;;
     0) Sair ;;
-    *) "Opção inválida" ; echo ; slowdns ;;
+    *) "Invalid option" ; echo ; slowdns ;;
     esac
     }
 
@@ -102,7 +102,7 @@ Opcao10 () {
 Opcao11 () {
      clear
     bash /etc/slowdns/remove-slow
-    echo -e "\033[0;31mSlowDNS Manager Desinstalado!\033[0m"
+    echo -e "\033[0;31mSlowDNS Manager Uninstalled!\033[0m"
     sleep 2
     rm /bin/slowdns
 }
