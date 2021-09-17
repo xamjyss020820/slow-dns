@@ -64,7 +64,7 @@ echo -e "${RED}$banner${SCOLOR}"
 }
 dns=$3
 [[ -z "$dns" ]] && {
-    dns='187.50.250.115'
+    dns='1.1.1.1'
 }
 echo -ne "\n${RED}[${YELLOW}!${RED}] ${YELLOW}PARA CONTINUAR CERTIFIQUE-SE DE\nESTÁ APENAS COM OS ${RED}(${YELLOW}DADOS MOVEIS${RED})\n${YELLOW}ATIVADO ${GREEN}ENTER ${YELLOW}PARA CONTINUAR.. ${SCOLOR}"; read
 $HOME/dns -udp ${dns}:53 -pubkey ${chave} ${ns} 127.0.0.1:2222 > /dev/null 2>&1 &
