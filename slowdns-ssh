@@ -248,7 +248,7 @@ opc_key2 () {
 echo -e "Downloading default key pair..."
 cd
 wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/server.key
-wget https://raw.githubusercontent.com/xamjyss020820xamjyss020820/slow-dns/main/server.pub
+wget https://raw.githubusercontent.com/xamjyss020820/slow-dns/main/server.pub
 sleep 1
 echo -e "Download Completed"
 sleep 1
